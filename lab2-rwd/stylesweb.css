@@ -1,0 +1,404 @@
+body {
+    margin: 0px;
+    background-color: rgb(239, 241, 243);
+}
+
+button {
+    background: rgba(175, 175, 175, 0);
+    padding: 5px;
+    margin-bottom: 20px;
+    font-weight: lighter;
+    color: white;
+    border: solid lightgoldenrodyellow 4px;
+}
+
+button:hover {
+    color: darkgreen;
+    transition-duration: 1s
+}
+
+button:active {
+    background-color: lightblue;
+}
+
+#container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header header header" "ciasto-op ciasto-op ciasto-zdj" "karta1 karta2 karta3" "karta4 karta5 karta6" "footer footer footer";
+}
+
+#header-top {
+    display: grid;
+    grid-area: header;
+    grid-template-rows: 60px auto;
+    background-size: cover;
+    background-image: url("img/foodbaner.png");
+}
+
+#nav-top {
+    background-color: rgb(14,124,111);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#nav-top ul {
+    margin: 0;
+    align-self: center;
+}
+
+#nav-top li {
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: rgb(40, 131, 120);
+}
+
+#nav-top li>a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+#nav-top li>a:hover {
+    color: lightblue;
+    transition-duration: 1s;
+}
+
+#nav-top #logo {
+    margin-left: 10px;
+    align-self: center;
+    justify-self: end;
+}
+
+#nav-top #logo img {
+    max-height: 45px;
+}
+
+#nav-top button {
+    padding: 10px;
+    align-self: center;
+    justify-self: end;
+    border: solid white 2px;
+    background-color: rgb(59, 145, 135);
+    color: white;
+    margin: auto 20px;
+    border-radius: 5px;
+}
+
+#nav-top button:active {
+    background-color: lightblue;
+}
+
+#nav-top button:hover {
+    color: lightblue;
+    transition-duration: 1s
+}
+
+#baner {
+    color: white;
+    text-shadow: 0px 0px 14px black;
+    font-size: 2.5em;
+    text-align: center;    
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#baner>h2 {
+    font-size: 1em;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#baner button {
+    background: rgba(61, 54, 54, 0.568);
+    padding: 20px;
+    text-shadow: 0px 0px 14px black;
+    font-weight: lighter;
+    font-size: .5em;
+    border: solid lightyellow 4px;
+    color: white;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+#baner button:active {
+    background-color: lightblue;
+}
+
+#baner button:hover {
+    color: lightblue;
+    transition-duration: 1s
+}
+
+#ciasto-dnia {
+    background-color: rgba(142, 216, 207, 0.5);
+    margin: 20px 0 20px 30px;
+    grid-area: ciasto-op;
+    padding: 25px;
+    border-radius: 15px;
+}
+#ciasto-dnia-składniki > h2{
+    text-align: center;
+}
+
+#ciasto-dnia-image {
+    grid-area: ciasto-zdj;
+}
+
+#ciasto-dnia-image img {
+    max-width: 95%;
+    border-radius: 50px;
+    margin: 20px 0 20px 0;
+}
+
+#karta1 {
+    background-color: rgba(142, 216, 207, 0.5);
+    grid-area: karta1;
+}
+
+#karta2 {
+    background-color: rgba(142, 216, 207, 0.5);
+    grid-area: karta2;
+}
+
+#karta3 {
+    background-color: rgba(142, 216, 207, 0.5);
+    grid-area: karta3;
+}
+#karta4 {
+    background-color: rgba(142, 216, 207, 0.5);
+    grid-area: karta4;
+}
+
+#karta5 {
+    background-color: rgba(142, 216, 207, 0.5);
+    grid-area: karta5;
+}
+
+#karta6 {
+    background-color: rgba(142, 216, 207, 0.5);
+    grid-area: karta6;
+}
+
+.karta-przepisu {
+    width: 90%;
+    min-height: 650px;
+    margin: auto auto 20px auto;
+    border-radius: 25px;
+}
+
+.karta-przepisu .zdjecie-przepisu-karty h1 {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+    margin: 30px auto 0 auto;
+}
+
+.karta-przepisu .zdjecie-przepisu-karty button {
+    background: rgba(142, 216, 207, 0.829);
+    font-size: 1em;
+    padding: 10px;
+    font-weight: bold;
+    margin: auto auto 10% auto;
+    border-radius: 10px;
+}
+
+.karta-przepisu .zdjecie-przepisu-karty {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    width: 100%;
+    height: 100%;
+    background-size: 10vw;
+    background-size: cover;
+    border-radius: 15px;
+
+}
+
+.karta-przepisu h3 {
+    text-align: center;
+}
+
+.karta-przepisu .skladniki-karta {
+    padding: 10px;
+}
+
+#karta1 .zdjecie-przepisu-karty {
+    background-size: cover;
+    background-image: url("img/ciasto-brownie.png")
+}
+
+#karta2 .zdjecie-przepisu-karty {
+    background-size: cover;
+    background-image: url("img/ciasto-kruche.png")
+}
+
+#karta3 .zdjecie-przepisu-karty {
+    background-size: cover;
+    background-image: url("img/ciasto-strudel.png")
+}
+#karta4 .zdjecie-przepisu-karty {
+    background-size: cover;
+    background-image: url("img/ciasto-chmura.png")
+}
+
+#karta5 .zdjecie-przepisu-karty {
+    background-size: cover;
+    background-image: url("img/ciasto-sernik.png")
+}
+
+#karta6 .zdjecie-przepisu-karty {
+    background-size: cover;
+    background-image: url("img/ciasto-michalek.png")
+}
+.zdjecie-przepisu-karty h1{
+    font-weight: bold;
+    text-align: center;
+}
+
+#footer-bot {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(14,124,111);
+    color: white;
+    grid-area: footer;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 25% 35% 25% 15%;
+    grid-template-areas: "logo fb twitter ." ". madeby grupa wydział";
+}
+
+#footer-logo {
+    text-align: left;
+    margin: 5px;
+    grid-area: logo;
+}
+
+#footer-logo img {
+    margin-left: 5px;
+    max-height: 55px;
+}
+
+#footer-fb {
+    text-align: center;
+    grid-area: fb;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+#footer-twitter {
+    grid-area: twitter;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+#footer-madeby {
+    grid-area: madeby;
+}
+
+#footer-grupa {
+    grid-area: grupa;
+}
+
+#footer-wydział {
+    grid-area: wydział;
+}
+#footer-bot a:link {
+    color: lightblue;
+}
+#footer-bot a:visited {
+    color: lightslategrey;
+}
+#footer-bot a:hover {
+    color: lightpink;
+    transition-duration: 1s;
+}
+@media (max-width: 1000px){
+    #container {
+        margin: auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "header header" "ciasto-op ciasto-zdj" "karta1 karta2" "karta3 karta4" "karta5 karta6" "footer footer";
+    }
+}
+@media (max-width: 780px){
+    #header-top {
+        display: grid;
+        grid-area: header;
+        grid-template-rows: 130px auto;
+        background-size: cover;
+        background-image: url("foodbaner.png");
+    }
+
+    #nav-top {
+        flex-direction: row;
+    }
+    #nav-top li {
+        display: inline-block;
+        padding: 10px 40px;
+        background-color: rgb(40, 131, 120);
+        margin: 1px;
+    }
+    #nav-top #logo {
+        margin-left: 10px;
+        align-self: center; 
+        justify-self: center;
+        padding-top: 7px;
+    }
+    
+    #nav-top #logo img {
+        max-height: 100px;
+    }
+    #container {
+        margin: auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "header header" "ciasto-op ciasto-zdj" "karta1 karta2" "karta3 karta4" "karta5 karta6" "footer footer";
+    }
+    #footer-bot {
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: rgb(14,124,111);
+        color: white;
+        grid-area: footer;
+        display: grid;
+        grid-template-rows: 30px 50px;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "fb twitter" "madeby grupa";
+    }
+    #footer-logo img {
+        margin-left: 5px;
+        max-height: 55px;
+        display: none;
+    }
+    #footer-wydział {
+        grid-area: wydział;
+        display: none;
+    }
+}
+@media (max-width: 620px){
+    #container {
+        margin: auto;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: "header" "ciasto-zdj" "ciasto-op" "karta1" "karta2" "karta3" "karta4" "karta5" "karta6" "footer";
+    }
+    #ciasto-dnia-image img {
+        max-width: 95%;
+        border-radius: 50px;
+        margin: 20px 20px 0 20px;
+    }
+    #ciasto-dnia {
+        background-color: rgba(142, 216, 207, 0.5);
+        margin: 0 20px 20px 20px;
+        grid-area: ciasto-op;
+        padding: 25px;
+        border-radius: 15px;
+}
+}

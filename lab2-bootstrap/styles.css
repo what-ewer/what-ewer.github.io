@@ -1,0 +1,120 @@
+body{
+    background-color: rgb(52,58,64);
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#zespół { padding-top: 40px; }
+#kimjesteśmy { padding-top: 40px; }
+#wspolpraca { padding-top: 40px; }
+#kontakt { padding-top: 40px; padding-bottom: 50px;}
+
+.jumbotron {
+    background-size: cover;
+    background-image: url("img/jumbotrontlo.png");
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#zespół{
+    text-align: center;
+}
+
+.card-deck{
+    width: 100%;
+}
+
+.card{
+    background-color: rgb(52,58,64);
+    color: white;
+    text-align: center;
+}
+
+#zespół img
+{
+	width: 100%;
+	height: auto;
+}
+
+h1{
+	font-size: 45px;
+	font-weight: 400;
+	color: #C0D06F;
+    margin: 20px;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+.carousel-item {
+    height: 65vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.contact{
+    height: 400px;
+    margin-bottom:160px;
+}
+@media (min-width: 768px) { 
+    .contact{
+        height: 400px;
+        margin-top:30px;
+        margin-bottom:0;
+    }
+ }
+
+.col-md-3{
+    background: #C0D06F;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.col-md-9{
+    background: #fff;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.contact-form label{
+    font-weight:600;
+}
+
+.contact-form button{
+    background: rgb(52,58,64);
+    color: #fff;
+    font-weight: 600;
+    width: 25%;
+}
+
+.contact .control-label{
+    color:black;
+}
+
+.contact-form button:focus{
+    box-shadow:none;
+}
+
+#carouselExampleIndicators{
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#carouselExampleIndicators h3{
+    font-size: 80px;
+}
+
+#carouselExampleIndicators p{
+    font-size: 25px;
+}
+#kimjesteśmy {
+    padding-right: 15px;
+    padding-left: 15px;
+}
