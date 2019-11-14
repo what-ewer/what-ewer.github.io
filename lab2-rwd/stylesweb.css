@@ -330,7 +330,7 @@ button:active {
         grid-area: header;
         grid-template-rows: 130px auto;
         background-size: cover;
-        background-image: url("foodbaner.png");
+        background-image: url("img/foodbaner.png");
     }
 
     #nav-top {
