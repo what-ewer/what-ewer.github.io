@@ -146,9 +146,9 @@ button:active {
 }
 
 #ciasto-dnia-image img {
-    max-width: 95%;
+    max-width: 90%;
     border-radius: 50px;
-    margin: 20px 0 20px 0;
+    margin: 20px 5% 20px 5%;
 }
 
 #karta1 {
@@ -403,9 +403,7 @@ button:active {
     }       
 }
 @media screen and (max-width: 490px){
-    #header-top{
-        display: none;
-    }
+
     #footer-bot{
         grid-template-columns: 100% 100% 100% 100%;
         grid-template-areas: "fb" "twitter" "madeby" "grupa";
@@ -415,6 +413,28 @@ button:active {
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: auto;
-        grid-template-areas: "ciasto-zdj" "ciasto-op" "karta1" "karta2" "karta3" "karta4" "karta5" "karta6" "footer";
+        grid-template-areas: "header" "ciasto-zdj" "ciasto-op" "karta1" "karta2" "karta3" "karta4" "karta5" "karta6" "footer";
+    }
+    #ciasto-dnia-image img {
+        max-width: 90%;
+        margin: 5px 5% 5px 5%;
+        align-content: center;
+    }
+    #baner > h2 {
+        display: none;
+    }
+    #baner button{
+        display: none;
+    }
+    #nav-top #logo{
+        display: none;
+    }
+}
+@media screen and (max-width: 340px){
+    #header-top {
+        grid-template-rows: 150px auto;
+    }
+    #nav-top button{
+        display: none;
     }
 }
