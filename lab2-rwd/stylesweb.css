@@ -315,7 +315,7 @@ button:active {
     color: lightpink;
     transition-duration: 1s;
 }
-@media (max-width: 1000px){
+@media screen and (max-width: 1000px){
     #container {
         margin: auto;
         display: grid;
@@ -324,7 +324,7 @@ button:active {
         grid-template-areas: "header header" "ciasto-op ciasto-zdj" "karta1 karta2" "karta3 karta4" "karta5 karta6" "footer footer";
     }
 }
-@media (max-width: 780px){
+@media screen and (max-width: 820px){
     #header-top {
         display: grid;
         grid-area: header;
@@ -381,7 +381,7 @@ button:active {
         display: none;
     }
 }
-@media (max-width: 620px){
+@media screen and (max-width: 650px){
     #container {
         margin: auto;
         display: grid;
@@ -400,5 +400,21 @@ button:active {
         grid-area: ciasto-op;
         padding: 25px;
         border-radius: 15px;
+    }       
 }
+@media screen and (max-width: 490px){
+    #header-top{
+        display: none;
+    }
+    #footer-bot{
+        grid-template-columns: 100% 100% 100% 100%;
+        grid-template-areas: "fb" "twitter" "madeby" "grupa";
+    }
+    #container {
+        margin: auto;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: "ciasto-zdj" "ciasto-op" "karta1" "karta2" "karta3" "karta4" "karta5" "karta6" "footer";
+    }
 }
