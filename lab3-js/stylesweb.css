@@ -1,0 +1,569 @@
+body {
+    margin: 0px;
+    background-color: rgb(239, 241, 243);
+}
+
+
+button {
+    background: rgba(175, 175, 175, 0);
+    padding: 5px;
+    margin-bottom: 20px;
+    font-weight: lighter;
+    color: white;
+    border: solid lightgoldenrodyellow 4px;
+}
+
+button:hover {
+    color: darkgreen;
+    transition-duration: 1s
+}
+
+button:active {
+    background-color: lightblue;
+}
+
+#container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header header header" "ciasto-op ciasto-op ciasto-zdj" "karta1 karta2 karta3" "karta4 karta5 karta6" "karta7 karta8 karta9" "dodaj_przepis dodaj_przepis dodaj_przepis" "footer footer footer";
+}
+
+#header-top {
+    display: grid;
+    grid-area: header;
+    grid-template-rows: 60px auto;
+    background-size: cover;
+    background-image: url("img/foodbaner.png");
+}
+
+#nav-top {
+    background-color: rgb(14,124,111);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#nav-top ul {
+    margin: 0;
+    align-self: center;
+}
+
+#nav-top li {
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: rgb(40, 131, 120);
+}
+
+#nav-top li>a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+#nav-top li>a:hover {
+    color: lightblue;
+    transition-duration: 1s;
+}
+
+#nav-top #logo {
+    margin-left: 10px;
+    align-self: center;
+    justify-self: end;
+}
+
+#nav-top #logo img {
+    max-height: 45px;
+}
+
+#nav-top button {
+    padding: 10px;
+    align-self: center;
+    justify-self: end;
+    border: solid white 2px;
+    background-color: rgb(59, 145, 135);
+    color: white;
+    margin: auto 20px;
+    border-radius: 5px;
+}
+
+#nav-top button:active {
+    background-color: lightblue;
+}
+
+#nav-top button:hover {
+    color: lightblue;
+    transition-duration: 1s
+}
+
+#baner {
+    color: white;
+    text-shadow: 0px 0px 14px black;
+    font-size: 2.5em;
+    text-align: center;    
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#baner>h2 {
+    font-size: 1em;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#baner button {
+    background: rgba(61, 54, 54, 0.568);
+    padding: 20px;
+    text-shadow: 0px 0px 14px black;
+    font-weight: lighter;
+    font-size: .5em;
+    border: solid lightyellow 4px;
+    color: white;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+#baner button:active {
+    background-color: lightblue;
+}
+
+#baner button:hover {
+    color: lightblue;
+    transition-duration: 1s
+}
+
+#ciasto-dnia {
+    background-color: rgba(142, 216, 207, 0.5);
+    margin: 20px 0 20px 30px;
+    grid-area: ciasto-op;
+    padding: 25px;
+    border-radius: 15px;
+}
+#ciasto-dnia-składniki > h2{
+    text-align: center;
+}
+
+#ciasto-dnia-image {
+    grid-area: ciasto-zdj;
+}
+
+#ciasto-dnia-image img {
+    max-width: 90%;
+    border-radius: 50px;
+    margin: 20px 5% 20px 5%;
+}
+
+.karta-przepisu{
+    background-color: rgba(142, 216, 207, 0.5);
+}
+
+#karta1 {
+    background-color: rgba(142, 216, 207, 0.5);
+    grid-area: karta1;
+}
+
+#karta2 {
+    background-color: rgba(142, 216, 207, 0.5);
+    grid-area: karta2;
+}
+
+#karta3 {
+    background-color: rgba(142, 216, 207, 0.5);
+    grid-area: karta3;
+}
+#karta4 {
+    background-color: rgba(142, 216, 207, 0.5);
+    grid-area: karta4;
+}
+
+#karta5 {
+    background-color: rgba(142, 216, 207, 0.5);
+    grid-area: karta5;
+}
+
+#karta6 {
+    background-color: rgba(142, 216, 207, 0.5);
+    grid-area: karta6;
+}
+
+.karta-przepisu {
+    width: 90%;
+    min-height: 750px;
+    margin: auto auto 20px auto;
+    border-radius: 25px;
+}
+
+.karta-przepisu .zdjecie-przepisu-karty h1 {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+    margin: 30px auto 0 auto;
+}
+
+.karta-przepisu .zdjecie-przepisu-karty button {
+    background: rgba(142, 216, 207, 0.829);
+    font-size: 1em;
+    padding: 10px;
+    font-weight: bold;
+    margin: auto auto 10% auto;
+    border-radius: 10px;
+}
+
+.karta-przepisu .zdjecie-przepisu-karty {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    width: 100%;
+    height: 100%;
+    background-size: 10vw;
+    background-size: cover;
+    border-radius: 15px;
+
+}
+
+.karta-przepisu h3 {
+    text-align: center;
+}
+
+.karta-przepisu h3.skladniki-h {
+    text-align: center;
+}
+
+.karta-przepisu .przepis-h {
+    padding: 10px;
+    text-align: center;
+    display: none;
+}
+
+.karta-przepisu .skladniki-karta {
+    padding: 10px;
+}
+
+.karta-przepisu .skladniki-przepis {
+    padding: 10px;
+    display: none;
+}
+.zdjecie-przepisu-karty {
+background-size: cover;
+}
+#karta1 .zdjecie-przepisu-karty {
+    background-size: cover;
+    background-image: url("img/ciasto-brownie.png")
+}
+
+#karta2 .zdjecie-przepisu-karty {
+    background-size: cover;
+    background-image: url("img/ciasto-kruche.png")
+}
+
+#karta3 .zdjecie-przepisu-karty {
+    background-size: cover;
+    background-image: url("img/ciasto-strudel.png")
+}
+#karta4 .zdjecie-przepisu-karty {
+    background-size: cover;
+    background-image: url("img/ciasto-chmura.png")
+}
+
+#karta5 .zdjecie-przepisu-karty {
+    background-size: cover;
+    background-image: url("img/ciasto-sernik.png")
+}
+
+#karta6 .zdjecie-przepisu-karty {
+    background-size: cover;
+    background-image: url("img/ciasto-michalek.png")
+}
+.zdjecie-przepisu-karty h1{
+    font-weight: bold;
+    text-align: center;
+}
+
+#footer-bot {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(14,124,111);
+    color: white;
+    grid-area: footer;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 25% 35% 25% 15%;
+    grid-template-areas: "logo fb twitter ." ". madeby grupa wydział";
+}
+
+#footer-logo {
+    text-align: left;
+    margin: 5px;
+    grid-area: logo;
+}
+
+#footer-logo img {
+    margin-left: 5px;
+    max-height: 55px;
+}
+
+#footer-fb {
+    text-align: center;
+    grid-area: fb;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+#footer-twitter {
+    grid-area: twitter;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+#footer-madeby {
+    grid-area: madeby;
+}
+
+#footer-grupa {
+    grid-area: grupa;
+}
+
+#footer-wydział {
+    grid-area: wydział;
+}
+#footer-bot a:link {
+    color: lightblue;
+}
+#footer-bot a:visited {
+    color: lightslategrey;
+}
+#footer-bot a:hover {
+    color: lightpink;
+    transition-duration: 1s;
+}
+
+#float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:22px;
+}
+
+@media screen and (max-width: 1000px){
+    #container {
+        margin: auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "header header" "ciasto-op ciasto-zdj" "karta1 karta2" "karta3 karta4" "karta5 karta6" "karta7 karta8" "karta9 ." "dodaj_przepis dodaj_przepis" "footer footer";
+    }
+}
+@media screen and (max-width: 820px){
+    #header-top {
+        display: grid;
+        grid-area: header;
+        grid-template-rows: 130px auto;
+        background-size: cover;
+        background-image: url("img/foodbaner.png");
+    }
+
+    #nav-top {
+        flex-direction: row;
+    }
+    #nav-top li {
+        display: inline-block;
+        padding: 10px 40px;
+        background-color: rgb(40, 131, 120);
+        margin: 1px;
+    }
+    #nav-top #logo {
+        margin-left: 10px;
+        align-self: center; 
+        justify-self: center;
+        padding-top: 7px;
+    }
+    
+    #nav-top #logo img {
+        max-height: 100px;
+    }
+    #container {
+        margin: auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "header header" "ciasto-op ciasto-zdj" "karta1 karta2" "karta3 karta4" "karta5 karta6" "karta7 karta8" "karta9 ." "dodaj_przepis dodaj_przepis"  "footer footer";
+    }
+    #footer-bot {
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: rgb(14,124,111);
+        color: white;
+        grid-area: footer;
+        display: grid;
+        grid-template-rows: 30px 50px;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "fb twitter" "madeby grupa";
+    }
+    #footer-logo img {
+        margin-left: 5px;
+        max-height: 55px;
+        display: none;
+    }
+    #footer-wydział {
+        grid-area: wydział;
+        display: none;
+    }
+}
+@media screen and (max-width: 650px){
+    #container {
+        margin: auto;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: "header" "ciasto-zdj" "ciasto-op" "karta1" "karta2" "karta3" "karta4" "karta5" "karta6" "karta7" "karta8" "karta9"  "dodaj_przepis" "footer";
+    }
+    #ciasto-dnia-image img {
+        max-width: 95%;
+        border-radius: 50px;
+        margin: 20px 20px 0 20px;
+    }
+    #ciasto-dnia {
+        background-color: rgba(142, 216, 207, 0.5);
+        margin: 0 20px 20px 20px;
+        grid-area: ciasto-op;
+        padding: 25px;
+        border-radius: 15px;
+    }       
+}
+@media screen and (max-width: 490px){
+
+    #footer-bot{
+        grid-template-columns: 100% 100% 100% 100%;
+        grid-template-areas: "fb" "twitter" "madeby" "grupa";
+    }
+    #container {
+        margin: auto;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: "header" "ciasto-zdj" "ciasto-op" "karta1" "karta2" "karta3" "karta4" "karta5" "karta6" "karta7" "karta8" "karta9" "dodaj_przepis" "footer";
+    }
+    #ciasto-dnia-image img {
+        max-width: 90%;
+        margin: 5px 5% 5px 5%;
+        align-content: center;
+    }
+    #baner > h2 {
+        display: none;
+    }
+    #baner button{
+        display: none;
+    }
+    #nav-top #logo{
+        display: none;
+    }
+}
+@media screen and (max-width: 340px){
+    #header-top {
+        grid-template-rows: 150px auto;
+    }
+    #nav-top button{
+        display: none;
+    }
+}
+#dodanie_przepisu{
+    grid-area: dodaj_przepis;
+}
+.row {
+    margin: 0 auto;
+    padding: 20px 20px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+  .row span {
+    position: relative;
+    display: inline-block;
+    margin: 30px 10px;
+  }.balloon {
+    display: inline-block;
+    width: 215px;
+    padding: 10px 0 10px 15px;
+    font-family: "Open Sans", sans;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    background: #75a785;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    text-indent: 60px;
+    transition: all .3s ease-in-out;
+  }
+  .balloon::-webkit-input-placeholder {
+    color: #357a75;
+    text-indent: 0;
+    font-weight: 300;
+  }
+  .balloon + label {
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    bottom: 8px;
+    padding: 5px 15px;
+    color: #032429;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 rgba(19, 74, 70, 0);
+    transition: all .3s ease-in-out;
+    border-radius: 3px;
+    background: rgba(122, 184, 147, 0);
+  }
+  .balloon + label:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: 100%;
+    left: 50%;
+    margin-left: -3px;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 3px solid rgba(122, 184, 147, 0);
+    transition: all .3s ease-in-out;
+  }
+  
+  .balloon:focus,
+  .balloon:active {
+    color: #377D6A;
+    text-indent: 0;
+    background: rgb(155, 199, 186);
+  }
+  .balloon:focus::-webkit-input-placeholder,
+  .balloon:active::-webkit-input-placeholder {
+    color: rgb(57, 126, 114);
+  }
+  .balloon:focus + label,
+  .balloon:active + label {
+    color: rgb(42, 112, 95);
+    text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+    background: #7ab893;
+    transform: translateY(-40px);
+  }
+  .balloon:focus + label:after,
+  .balloon:active + label:after {
+    border-top: 4px solid #7ab893;
+  }
+#button_dodaj_przepis{
+    background: rgb(81, 136, 122);
+    border-radius: 10px;
+    padding: 10px;
+}
