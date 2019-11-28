@@ -1,6 +1,12 @@
 var karty = document.querySelectorAll(".karta-przepisu");
 
 karty.forEach(karta => {
+    var opis_karty = karta.querySelector(".karta-opis");
+    var przepis_karty = opis_karty.querySelector(".skladniki-przepis");
+    przepis_karty.classList.add('hidden');
+});
+
+karty.forEach(karta => {
 
     var opis_karty = karta.querySelector(".karta-opis");
     var skladniki_header = opis_karty.querySelector(".skladniki-h");
@@ -17,26 +23,60 @@ karty.forEach(karta => {
         console.log("out of object");
     })
 
-    button.addEventListener("click", () => {
+    button.addEventListener("click", function () {
         if(skladniki_header.innerHTML == "Składniki"){
             karty.forEach(karta => {
                 var opis_karty = karta.querySelector(".karta-opis");
                 var skladniki_header = opis_karty.querySelector(".skladniki-h");
                 var skladniki_karty = opis_karty.querySelector(".skladniki-karta");
                 var przepis_karty = opis_karty.querySelector(".skladniki-przepis");
-                skladniki_header.innerHTML = "Składniki";
-                skladniki_karty.style.display = "inline";
-                przepis_karty.style.display = "none";
+                if(skladniki_header.innerHTML == "Przepis"){
+                    skladniki_header.innerHTML = "Składniki";
+                    przepis_karty.classList.add('visuallyhidden');    
+                    przepis_karty.addEventListener('transitionend', function(e) {
+                        przepis_karty.classList.add('hidden');
+                    }, {
+                    capture: false,
+                    once: true,
+                    passive: false
+                    });
+                    setTimeout(function () {
+                    skladniki_karty.classList.remove('hidden');
+                    skladniki_karty.classList.remove('visuallyhidden');
+                    }, 1200);
+                } 
             })
             skladniki_header.innerHTML = "Przepis";
-            skladniki_karty.style.display = "none";
-            przepis_karty.style.display = "inline";
+
+            skladniki_karty.classList.add('visuallyhidden');    
+            skladniki_karty.addEventListener('transitionend', function(e) {
+                skladniki_karty.classList.add('hidden');
+            }, {
+            capture: false,
+            once: true,
+            passive: false
+            });
+            setTimeout(function () {
+            przepis_karty.classList.remove('hidden');
+            przepis_karty.classList.remove('visuallyhidden');
+            }, 1200);
         }else{
             skladniki_header.innerHTML = "Składniki";
-            skladniki_karty.style.display = "inline";
-            przepis_karty.style.display = "none";
+
+            przepis_karty.classList.add('visuallyhidden');    
+            przepis_karty.addEventListener('transitionend', function(e) {
+                przepis_karty.classList.add('hidden');
+            }, {
+            capture: false,
+            once: true,
+            passive: false
+            });
+            setTimeout(function () {
+            skladniki_karty.classList.remove('hidden');
+            skladniki_karty.classList.remove('visuallyhidden');
+            }, 1200);
         }
-    })
+    }, false);
 });
 
 var logowanie_button = document.querySelector("#logowanie-button");
@@ -130,6 +170,7 @@ dodaj_przepis.addEventListener("click", ()=>{
     var przepis_karty = opis_karty.querySelector(".skladniki-przepis");
     var zdjecie_przepisu = karta.querySelector(".zdjecie-przepisu-karty");
     var button = zdjecie_przepisu.querySelector("button");
+    przepis_karty.classList.add('hidden');
 
     button.addEventListener("click", () => {
         if(skladniki_header.innerHTML == "Składniki"){
