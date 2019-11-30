@@ -29,7 +29,7 @@ button:active {
     display: grid;
     grid-template-columns: 33% 34% 33%;
     grid-template-rows: auto auto auto auto;
-    grid-template-areas: "header header header" "ciasto-op ciasto-op ciasto-zdj" "karta1 karta2 karta3" "karta4 karta5 karta6" "karta7 karta8 karta9" "dodaj_przepis dodaj_przepis dodaj_przepis" "footer footer footer";
+    grid-template-areas: "header header header" "ciasto-op ciasto-op ciasto-zdj" "karta1 karta2 karta3" "karta4 karta5 karta6" "karta7 karta8 karta9" "karta10 karta11 karta12" "karta13 karta14 karta15" "dodaj_przepis dodaj_przepis dodaj_przepis" "footer footer footer";
 }
 
 #header-top {
@@ -369,7 +369,7 @@ background-size: cover;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: auto auto auto auto auto;
-        grid-template-areas: "header header" "ciasto-op ciasto-zdj" "karta1 karta2" "karta3 karta4" "karta5 karta6" "karta7 karta8" "karta9 ." "dodaj_przepis dodaj_przepis" "footer footer";
+        grid-template-areas: "header header" "ciasto-op ciasto-zdj" "karta1 karta2" "karta3 karta4" "karta5 karta6" "karta7 karta8" "karta9  karta10" "karta11 karta12" "karta13 karta14" "karta15 ."  "dodaj_przepis dodaj_przepis" "footer footer";
     }
 }
 @media screen and (max-width: 820px){
@@ -405,7 +405,7 @@ background-size: cover;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: auto auto auto auto auto;
-        grid-template-areas: "header header" "ciasto-op ciasto-zdj" "karta1 karta2" "karta3 karta4" "karta5 karta6" "karta7 karta8" "karta9 ." "dodaj_przepis dodaj_przepis"  "footer footer";
+        grid-template-areas: "header header" "ciasto-op ciasto-zdj" "karta1 karta2" "karta3 karta4" "karta5 karta6" "karta7 karta8" "karta9 karta10" "karta11 karta12" "karta13 karta14" "karta15 ." "dodaj_przepis dodaj_przepis"  "footer footer";
     }
     #footer-bot {
         text-align: center;
@@ -435,7 +435,7 @@ background-size: cover;
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: auto;
-        grid-template-areas: "header" "ciasto-zdj" "ciasto-op" "karta1" "karta2" "karta3" "karta4" "karta5" "karta6" "karta7" "karta8" "karta9"  "dodaj_przepis" "footer";
+        grid-template-areas: "header" "ciasto-zdj" "ciasto-op" "karta1" "karta2" "karta3" "karta4" "karta5" "karta6" "karta7" "karta8" "karta9" "karta10" "karta11" "karta12" "karta13" "karta14" "karta15"  "dodaj_przepis" "footer";
     }
     #ciasto-dnia-image img {
         max-width: 95%;
@@ -461,7 +461,7 @@ background-size: cover;
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: auto;
-        grid-template-areas: "header" "ciasto-zdj" "ciasto-op" "karta1" "karta2" "karta3" "karta4" "karta5" "karta6" "karta7" "karta8" "karta9" "dodaj_przepis" "footer";
+        grid-template-areas: "header" "ciasto-zdj" "ciasto-op" "karta1" "karta2" "karta3" "karta4" "karta5" "karta6" "karta7" "karta8" "karta9" "karta10" "karta11" "karta12" "karta13" "karta14" "karta15" "dodaj_przepis" "footer";
     }
     #ciasto-dnia-image img {
         max-width: 90%;
@@ -585,3 +585,9 @@ background-size: cover;
 .visuallyhidden {
     opacity: 0;
 }
+
+.centered{
+    margin: auto 40%  auto 40%;
+    border-radius: 10px;
+}
+

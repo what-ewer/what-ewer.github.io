@@ -154,9 +154,14 @@ dodaj_przepis.addEventListener("click", ()=>{
     var nCOpis = document.createElement('div');
     nCOpis.classList.add("karta-opis");
 
+    var del_button = document.createElement('button');
+    del_button.innerHTML = "Usuń przepis";
+    del_button.classList.add("centered")
+
     nCOpis.appendChild(nCSkladniki);
     nCOpis.appendChild(nCSkladnikiKarta);
     nCOpis.appendChild(nCSkladnikiPrzepis);
+    nCOpis.appendChild(del_button);
 
     noweCiasto.appendChild(nCZdjecie);
     noweCiasto.appendChild(nCOpis);
@@ -226,4 +231,9 @@ dodaj_przepis.addEventListener("click", ()=>{
             }, 1200);
         }
     }, false);
+
+    del_button.addEventListener("click", function () {
+        del_button.parentNode.parentNode.remove();
+    })
+
 });
